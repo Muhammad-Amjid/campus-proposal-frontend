@@ -1,0 +1,296 @@
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f8faff;
+}
+
+.dashboard-content {
+  flex: 1;
+  padding: 30px;
+}
+
+.dashboard-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.dashboard-header h1 {
+  font-size: 28px;
+  color: #1a2332;
+  margin-bottom: 5px;
+}
+
+.dashboard-header p {
+  color: #6b7280;
+}
+
+.btn-open-modal {
+  padding: 12px 22px;
+  background-color: #1a2332;
+  color: #d4af37;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn-open-modal:hover {
+  background-color: #2a3548;
+}
+
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.stat-number {
+  font-size: 28px;
+  font-weight: bold;
+  color: #1a2332;
+}
+
+.stat-label {
+  color: #6b7280;
+  margin-top: 5px;
+}
+
+.pending .stat-number {
+  color: orange;
+}
+
+.approved .stat-number {
+  color: green;
+}
+
+.rejected .stat-number {
+  color: red;
+}
+
+.section-card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.section-card h2 {
+  margin-bottom: 20px;
+  color: #1a2332;
+}
+
+/* Users table (My Students view) */
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.users-table th {
+  text-align: left;
+  padding: 12px;
+  font-size: 12px;
+  color: #74838a;
+  text-transform: uppercase;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.users-table td {
+  padding: 12px;
+  font-size: 13px;
+  color: #4a5568;
+  border-bottom: 1px solid #f0f4f9;
+}
+
+/* Filter tabs (All / Pending / Approved / Rejected) */
+.filter-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filter-tab {
+  padding: 8px 18px;
+  border-radius: 20px;
+  background: #f0f4f9;
+  color: #4a5568;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.filter-tab.active {
+  background: #1a2332;
+  color: #d4af37;
+}
+
+/* Proposal cards */
+.proposal-item {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 15px;
+}
+
+.proposal-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.proposal-item-header h3 {
+  color: #1a2332;
+}
+
+.status-badge {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status-badge.pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status-badge.approved {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status-badge.rejected {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.student-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 10px;
+  font-size: 13px;
+  color: #4a5568;
+}
+
+.proposal-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 10px;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.similarity-tag {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.similarity-tag.high {
+  background: #fdecec;
+  color: #d32f2f;
+}
+
+.similarity-tag.low {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+/* Review box (textarea + approve/reject buttons) */
+.review-box {
+  margin-top: 15px;
+}
+
+.review-box textarea {
+  width: 100%;
+  min-height: 80px;
+  padding: 12px;
+  border: 1px solid #dbe2ea;
+  border-radius: 8px;
+  font-size: 14px;
+  resize: vertical;
+  box-sizing: border-box;
+  margin-bottom: 12px;
+  font-family: inherit;
+}
+
+.review-box textarea:focus {
+  border-color: #1a2332;
+  outline: none;
+}
+
+.review-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-approve {
+  flex: 1;
+  padding: 12px;
+  background: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn-approve:hover {
+  background: #256428;
+}
+
+.btn-approve:disabled {
+  background: #a5c8a7;
+  cursor: not-allowed;
+}
+
+.btn-reject {
+  flex: 1;
+  padding: 12px;
+  background: #d32f2f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn-reject:hover {
+  background: #b02525;
+}
+
+.btn-reject:disabled {
+  background: #eba8a8;
+  cursor: not-allowed;
+}
+
+.feedback-box {
+  margin-top: 12px;
+  background: #f8faff;
+  border-left: 4px solid #1a2332;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.empty-state {
+  text-align: center;
+  color: #6b7280;
+  padding: 20px;
+}

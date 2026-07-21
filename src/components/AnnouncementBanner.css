@@ -1,0 +1,60 @@
+.announcement-banner-wrap {
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.announcement-banner {
+  background: linear-gradient(135deg, #1a2332, #2a3548);
+  border-left: 4px solid #d4af37;
+  border-radius: 14px;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.announcement-banner-content {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.announcement-banner-icon {
+  font-size: 20px;
+  margin-top: 2px;
+}
+
+.announcement-banner-text h4 {
+  color: #d4af37;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.announcement-banner-text p {
+  color: #e2e8f0;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.announcement-banner-meta {
+  color: #8b96a8;
+  font-size: 11px;
+  margin-top: 6px;
+}
+
+.announcement-banner-dismiss {
+  background: none;
+  border: none;
+  color: #8b96a8;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 4px 8px;
+  flex-shrink: 0;
+}
+
+.announcement-banner-dismiss:hover {
+  color: #ffffff;
+}

@@ -1,0 +1,126 @@
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f8faff;
+}
+
+.dashboard-content {
+  flex: 1;
+  padding: 30px 40px;
+}
+
+.dashboard-header {
+  margin-bottom: 25px;
+}
+
+.dashboard-header h1 {
+  font-size: 26px;
+  color: #1a2332;
+  margin-bottom: 5px;
+}
+
+.dashboard-header p {
+  color: #74838a;
+  font-size: 14px;
+}
+
+.search-bar-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.search-input {
+  flex: 2;
+  min-width: 220px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  outline: none;
+  font-size: 14px;
+  background: #ffffff;
+}
+
+.search-input:focus {
+  border-color: #1a2332;
+}
+
+.filter-select {
+  flex: 1;
+  min-width: 160px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  outline: none;
+  font-size: 14px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+.repo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 18px;
+}
+
+.repo-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: 0.2s;
+}
+
+.repo-card:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.repo-card-domain {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background-color: #ebf8ff;
+  color: #2b6cb0;
+  font-size: 11px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.repo-card h3 {
+  font-size: 16px;
+  color: #1a2332;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.repo-card p {
+  font-size: 13px;
+  color: #4a5568;
+  line-height: 1.6;
+  margin-bottom: 14px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.repo-card-footer {
+  border-top: 1px solid #f0f4f9;
+  padding-top: 12px;
+  font-size: 12px;
+  color: #8b96a8;
+}
+
+.repo-card-footer div {
+  margin-bottom: 4px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 50px;
+  color: #8b96a8;
+  font-size: 14px;
+  grid-column: 1 / -1;
+}
