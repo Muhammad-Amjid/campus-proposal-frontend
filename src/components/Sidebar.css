@@ -101,22 +101,19 @@
   color: #ffffff;
 }
 
-/* Hamburger button — hidden on desktop by default */
 .hamburger-btn {
   display: none;
 }
 
-/* Close button inside sidebar — hidden on desktop by default */
 .sidebar-close-btn {
   display: none;
 }
 
-/* Dark overlay — hidden on desktop by default */
 .sidebar-overlay {
   display: none;
 }
 
-/* ===== MOBILE: HAMBURGER MENU BEHAVIOR ===== */
+/* MOBILE */
 @media (max-width: 768px) {
   .hamburger-btn {
     display: block;
@@ -138,18 +135,33 @@
     position: fixed;
     top: 0;
     left: 0;
-    height: 100vh;
-    min-height: 100vh;
-    width: 240px;
+    height: 100dvh;
+    width: 280px;
+    max-width: 85vw;
     transform: translateX(-100%);
     transition: transform 0.25s ease;
     z-index: 1002;
     overflow-y: auto;
-
+    display: flex;
+    flex-direction: column;
   }
 
   .sidebar.sidebar-open {
     transform: translateX(0);
+  }
+
+  .sidebar-footer {
+    margin-top: auto;
+    padding: 20px;
+    border-top: 1px solid #2a3548;
+  }
+
+  .logout-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    box-sizing: border-box;
+    white-space: nowrap;
   }
 
   .sidebar-close-btn {
@@ -168,24 +180,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5);
     z-index: 1001;
-  }
-}
-@media (max-width: 768px) {
-  .sidebar {
-    width: 280px;
-    max-width: 85vw;
-  }
-
-  .sidebar-footer {
-    padding: 15px 20px;
-  }
-
-  .logout-btn {
-    width: 100%;
-    display: block;
-    box-sizing: border-box;
-    white-space: nowrap;
   }
 }
