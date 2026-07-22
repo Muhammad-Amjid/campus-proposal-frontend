@@ -14,6 +14,7 @@ export default function Register() {
     department: '',
     semester: '',
     batch: '',
+    accessCode: '',
   });
   const [errors, setErrors] = useState({});
   const [serverError, setServerError] = useState('');
@@ -57,6 +58,13 @@ export default function Register() {
       if (!formData.department.trim()) newErrors.department = 'Department is required';
       if (!formData.semester.trim()) newErrors.semester = 'Semester is required';
       if (!formData.batch.trim()) newErrors.batch = 'Batch is required';
+    }
+
+    // Supervisor/Admin require the access code
+    if (formData.role === 'supervisor' || formData.role === 'admin') {
+      if (!formData.accessCode.trim()) {
+        newErrors.accessCode = 'Access code is required for this role';
+      }
     }
 
     setErrors(newErrors);
@@ -213,6 +221,21 @@ export default function Register() {
                   {errors.semester && <p className="error-text">{errors.semester}</p>}
                 </div>
               </div>
+            </div>
+          )}
+
+          {/* Only show access code field for Supervisor/Admin */}
+          {(formData.role === 'supervisor' || formData.role === 'admin') && (
+            <div className="form-group">
+              <label>Access Code</label>
+              <input
+                type="password"
+                name="accessCode"
+                placeholder={`Enter the ${formData.role} access code`}
+                value={formData.accessCode}
+                onChange={handleChange}
+              />
+              {errors.accessCode && <p className="error-text">{errors.accessCode}</p>}
             </div>
           )}
 
