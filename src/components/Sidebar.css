@@ -172,3 +172,20 @@
     z-index: 1001;
   }
 }
+@media (max-width: 768px) {
+  .sidebar {
+    width: 280px;
+    max-width: 85vw;
+  }
+
+  .sidebar-footer {
+    padding: 15px 20px;
+  }
+
+  .logout-btn {
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    white-space: nowrap;
+  }
+}
