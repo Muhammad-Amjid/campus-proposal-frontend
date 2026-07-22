@@ -14,6 +14,12 @@
   margin-bottom: 20px;
 }
 
+.sidebar-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .sidebar-header h2 {
   color: #d4af37;
   font-size: 20px;
@@ -95,57 +101,72 @@
   color: #ffffff;
 }
 
-/* ===== MOBILE RESPONSIVE FIX ===== */
+/* Hamburger button — hidden on desktop by default */
+.hamburger-btn {
+  display: none;
+}
+
+/* Close button inside sidebar — hidden on desktop by default */
+.sidebar-close-btn {
+  display: none;
+}
+
+/* Dark overlay — hidden on desktop by default */
+.sidebar-overlay {
+  display: none;
+}
+
+/* ===== MOBILE: HAMBURGER MENU BEHAVIOR ===== */
 @media (max-width: 768px) {
+  .hamburger-btn {
+    display: block;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1001;
+    background-color: #1a2332;
+    color: #d4af37;
+    border: none;
+    border-radius: 8px;
+    width: 42px;
+    height: 42px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
   .sidebar {
-    width: 100%;
-    min-height: auto;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 12px 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    min-height: 100vh;
+    width: 240px;
+    transform: translateX(-100%);
+    transition: transform 0.25s ease;
+    z-index: 1002;
   }
 
-  .sidebar-header {
-    padding: 0;
-    border-bottom: none;
-    margin-bottom: 0;
-    margin-right: auto;
+  .sidebar.sidebar-open {
+    transform: translateX(0);
   }
 
-  .sidebar-header p {
-    display: none;
+  .sidebar-close-btn {
+    display: block;
+    background: none;
+    border: none;
+    color: #f8faff;
+    font-size: 18px;
+    cursor: pointer;
   }
 
-  .sidebar-nav {
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 0;
-    gap: 8px;
-    order: 3;
-    width: 100%;
-    margin-top: 10px;
-  }
-
-  .sidebar-link {
-    padding: 8px 12px;
-    font-size: 13px;
-  }
-
-  .sidebar-footer {
-    padding: 0;
-    border-top: none;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .sidebar-user {
-    margin-bottom: 0;
-  }
-
-  .logout-btn {
-    width: auto;
-    padding: 6px 12px;
+  .sidebar-overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1001;
   }
 }
