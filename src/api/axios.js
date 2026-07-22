@@ -1,9 +1,8 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://localhost:5000/api',
+  baseURL: 'https://harmonious-hope-production-b618.up.railway.app/api',
 });
-
 api.interceptors.request.use((config) => {
   const token = sessionStorage.getItem('token');
   if (token) {
