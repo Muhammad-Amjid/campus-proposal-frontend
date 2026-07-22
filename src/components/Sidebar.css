@@ -144,6 +144,8 @@
     transform: translateX(-100%);
     transition: transform 0.25s ease;
     z-index: 1002;
+    overflow-y: auto;
+
   }
 
   .sidebar.sidebar-open {
