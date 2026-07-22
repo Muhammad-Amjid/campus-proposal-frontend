@@ -212,3 +212,64 @@
   color: #6b7280;
   padding: 20px;
 }
+/* ===== MOBILE RESPONSIVE FIX — add this block to the bottom of
+   StudentDashboard.css, SupervisorDashboard.css, and AdminDashboard.css ===== */
+@media (max-width: 768px) {
+  .dashboard-layout {
+    flex-direction: column;
+  }
+
+  .dashboard-content {
+    padding: 15px;
+  }
+
+  .dashboard-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .stats-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .stat-card {
+    padding: 14px;
+  }
+
+  .stat-number {
+    font-size: 22px;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .proposal-item-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .proposal-meta,
+  .student-info {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .review-actions {
+    flex-direction: column;
+  }
+
+  .users-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .filter-tabs {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+  }
+}
